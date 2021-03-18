@@ -9,3 +9,32 @@
 #    So you want to remove thor and hulk from list and replace them with doctor strange (because he is cool).
 #    Do that with one line of code.
 # 5. Sort the heros list in alphabetical order (Hint. Use dir() functions to list down all functions available in list)
+
+heros=['spider man','thor','hulk','iron man','captain america']
+
+# find length of list
+print("Length of Heros List - ",len(heros))
+ 
+#add Black-Panther at the last of the list
+heros.insert(len(heros),'black panther')
+print("Added Black Panther at last position - ",heros)
+
+#remove black panther and add black panther after huk
+heros.remove('black panther')
+print("After remove ",heros)
+for i in range(len(heros)):
+    if heros[i] == 'hulk':
+        heros.insert(i+1,'black panther')
+    
+print("after adding black panther after hulk",heros)
+
+# remove thor and hulk replace with doctor strange in one line of code
+heros[1:3] = ['doctor strange']
+print("After Removing Hulk and Thor and Adding Doctor Strange - ",heros)
+
+
+
+#sorting list
+heros.sort()
+print("After Sorting List - ",heros)
+
