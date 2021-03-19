@@ -98,11 +98,21 @@ class LinkedList:
 
     def remove_by_value(self, data):
         # Remove first node that contains data
-        pass
+        itr = self.head
+        count =0
+        while itr:
+            if itr.data == data:
+                itr.data = itr.next.data
+                itr.next = itr.next.next
+                break
+            itr = itr.next
+            count +=1
 
 
 if __name__ == '__main__':
     ll = LinkedList()
     ll.insert_list(['mango','orange','apple','pappaya'])
     ll.insert_after_value('apple','jackfruit')
+    ll.prints()
+    ll.remove_by_value('jackfruit')
     ll.prints()
